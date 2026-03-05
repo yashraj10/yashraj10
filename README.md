@@ -84,8 +84,10 @@ Profiled 300K+ patient records and conducted hypothesis testing across 3 clinica
 
 ## 📊 GitHub Stats
 
-![Yashraj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yashraj10&show_icons=true&theme=default&hide_border=true&count_private=true)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yashraj10&layout=compact&theme=default&hide_border=true)
+![Yashraj's GitHub Stats](https://github-readme-stats.vercel.app/api?username=yashraj10&show_icons=true&theme=tokyonight&count_private=true&include_all_commits=true)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=yashraj10&layout=compact&theme=tokyonight&langs_count=8)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=yashraj10&theme=tokyonight)
 
 ---
 
