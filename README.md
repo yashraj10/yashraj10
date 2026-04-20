@@ -1,42 +1,44 @@
-# Hello, I'm Yashraj Jadhav 👋
+# Hi, I'm Yashraj Jadhav 👋
 
-**💡 MS Business Analytics (STEM) @ USC Marshall · Data Scientist · ML Engineer**
+**MS Business Analytics (STEM) @ USC Marshall · Data Scientist · ML Engineer**
 
 ![Profile Views](https://komarev.com/ghpvc/?username=yashraj10&color=blue&style=flat)
 
-I build production ML systems. Recent work includes causal inference pipelines at Capgemini that supported $4.2M in pharma go/no-go decisions, a PyTorch Transformer trained from scratch on 200K behavioral sequences for rage-quit prediction, and a multi-agent LangGraph pipeline for automated code review. Most of what I care about happens after a model ships: latency, drift, and whether anyone actually uses the output.
+I build ML systems that ship. My most recent production work at Capgemini was a causal inference pipeline that supported roughly $4.2M in pharmaceutical go/no-go decisions. The part I remember most wasn't the model — it was a clinical lead changing her recommendation based on what the analysis actually surfaced. Outside of client work I've trained a Transformer from scratch on 200K behavioral sequences, built a LangGraph multi-agent pipeline for automated code review, and deployed a 3-model ICU census forecaster behind a FastAPI service on GCP.
+
+What I care about usually isn't the model itself. It's what happens after it ships: latency under load, drift, and whether the person on the other end of the dashboard actually trusts the output enough to act on it.
 
 ---
 
-## 🧠 Field of Work
+## 🧠 What I Work On
 
-**End-to-End ML Systems & Production Deployment**
-Built a 3-model ICU census forecasting system (Random Forest + Ridge + Survival Analysis) deployed as a FastAPI microservice on GCP Cloud Run with Docker, 6 endpoints, Pydantic v2 validation, and 12 integration tests. Real-time serving with p50/p95 latency instrumentation.
+**Production ML & Deployment**
+3-model ICU census forecasting system (Random Forest, Ridge regression, survival analysis) deployed as a FastAPI microservice on GCP Cloud Run. Dockerized with 6 endpoints, Pydantic v2 validation, 12 integration tests, and p50/p95 latency instrumentation for real-time serving.
 
-**Deep Learning & Sequence Modeling**
-Designed a custom PyTorch Transformer encoder (4 layers, 4-head, 128-dim) from scratch on 200K Dota 2 behavioral sequences for rage quit prediction. Achieved AUC-PR 0.269, beating XGBoost/LSTM/LR baselines. Attention weight extraction via forward hooks for interpretability.
+**Distributed Data & Scale (PySpark)**
+Neural Collaborative Filtering recommender trained on the 32M-row MovieLens dataset. PySpark handled feature engineering and ratings-matrix construction; TensorFlow trained the NCF model; Airflow orchestrated the pipeline; MLflow tracked experiments. A 4-tier AWS S3 data lake sat underneath it, with PSI-gated drift monitoring to decide when a new model replaced the incumbent.
+
+**Causal Inference & Business Decisions**
+Causal inference work at Capgemini that informed $4.2M in pharma investment decisions. Treatment and control cohorting, stratified subgroup analysis, effect sizes with confidence intervals. SHAP interpretability on the XGBoost churn models and PSI for drift detection once they were live.
+
+**Deep Learning from Scratch**
+Custom PyTorch Transformer encoder (4 layers, 4 attention heads, 128-dim) built from scratch for rage-quit prediction on 200K Dota 2 behavioral sequences. AUC-PR of 0.269, ahead of XGBoost, LSTM, and logistic regression baselines. Attention weights extracted via forward hooks to understand which in-game events the model actually keyed on.
 
 **Agentic AI & LLM Pipelines**
-Built a 5-node LangGraph agentic pipeline (AI Repo Co-Pilot) using GPT-4o-mini for automated code review. 33/33 adversarial eval tests passing, with multi-step orchestration, structured output validation, and self-healing fallback logic.
+AI Repo Co-Pilot: a 5-node LangGraph pipeline using GPT-4o-mini for automated code review. 33 of 33 adversarial evaluation tests passing, with multi-step orchestration, structured output validation, and self-healing fallback logic for when a node returns malformed output.
 
-**Causal Inference & Uplift Modeling**
-Designed causal inference pipelines at Capgemini supporting $4.2M pharmaceutical go/no-go decisions. Work included treatment and control cohorts, stratified subgroup analysis, effect sizes with confidence intervals, and SHAP-based interpretability on XGBoost churn models with PSI drift detection.
-
-**Recommendation Systems & Distributed ML**
-Engineered a Neural Collaborative Filtering system on the MovieLens 32M dataset using PySpark feature engineering, TensorFlow NCF, Apache Airflow orchestration, MLflow experiment tracking, and AWS S3 as a 4-tier data lake. Drift-gated model promotion via PSI monitoring.
-
-**RAG & LLM-Grounded Decision Support**
-Built Decision Twin, a Gemini API + RAG architecture for retention strategy recommendations. Compares grounded (RAG) vs. ungrounded LLM outputs across accuracy, hallucination rate, and business coherence metrics.
+**RAG & LLM Evaluation**
+Decision Twin: a retention strategy recommender built on the Gemini API and RAG. Benchmarked grounded vs. ungrounded LLM output against accuracy, hallucination rate, and business coherence on a held-out set.
 
 ---
 
 ## 💼 Professional Experience
 
 **Data Scientist @ Capgemini Technology Services** *(July 2022 – August 2024)*
-Built production ML on 500K+ patient records: readmission classifiers, K-Means diagnostic clustering on 2.5 TB, and SQL ETL pipelines processing 50K+ daily records. Deployed TensorFlow SavedModel on GCP Cloud Run with AUC-ROC 0.84, F1 0.63, and 99.8% request success rate.
+Production ML on 500K+ patient records for pharma and provider clients. Hospital readmission classifier deployed as a TensorFlow SavedModel on GCP Cloud Run, running at AUC-ROC 0.84, F1 0.63, and 99.8% request success rate. K-Means diagnostic clustering across 2.5 TB of records. SQL ETL pipelines moving 50K+ records daily into the serving layer.
 
 **Data Science Intern @ Capgemini Technology Services** *(March 2022 – July 2022)*
-Profiled 300K+ patient records and conducted hypothesis testing across 3 clinical units to shape feature selection for production models.
+Profiled 300K+ patient records and ran hypothesis testing across three clinical units, which shaped feature selection for the production models that came later.
 
 ---
 
@@ -50,6 +52,9 @@ Profiled 300K+ patient records and conducted hypothesis testing across 3 clinica
 
 ### 🔧 Libraries and Frameworks
 
+![pandas](https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white)
+![PySpark](https://img.shields.io/badge/PYSPARK-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
+![NumPy](https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PYTORCH-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![TensorFlow](https://img.shields.io/badge/TENSORFLOW-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Keras](https://img.shields.io/badge/KERAS-D00000?style=for-the-badge&logo=keras&logoColor=white)
@@ -62,11 +67,8 @@ Profiled 300K+ patient records and conducted hypothesis testing across 3 clinica
 ![Gemini](https://img.shields.io/badge/GEMINI-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FASTAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/STREAMLIT-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
-![pandas](https://img.shields.io/badge/PANDAS-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NUMPY-013243?style=for-the-badge&logo=numpy&logoColor=white)
 ![Matplotlib](https://img.shields.io/badge/MATPLOTLIB-11557C?style=for-the-badge&logo=python&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/SEABORN-4C72B0?style=for-the-badge&logo=python&logoColor=white)
-![PySpark](https://img.shields.io/badge/PYSPARK-E25A1C?style=for-the-badge&logo=apachespark&logoColor=white)
 
 ### ⚙️ Tools & Platforms
 
@@ -92,7 +94,7 @@ Profiled 300K+ patient records and conducted hypothesis testing across 3 clinica
 
 ## 📝 Writing
 
-I write about ML systems, model interpretability, and production engineering on Medium.  
+I write about ML systems, model interpretability, and production engineering on Medium.
 → [Rage Quit Predictor: Building a Transformer from Scratch](https://medium.com/@yashrajjadhav269)
 
 ---
@@ -106,4 +108,4 @@ I write about ML systems, model interpretability, and production engineering on 
 
 ---
 
-*"Production ML isn't about the model. It's about what happens after the model."*
+*"Production ML isn't about the model. It's about what happens after."*
