@@ -4,7 +4,7 @@
 
 ![Profile Views](https://komarev.com/ghpvc/?username=yashraj10&color=blue&style=flat)
 
-I build ML systems that ship. My most recent production work at Capgemini was a causal inference pipeline that supported roughly $4.2M in pharmaceutical go/no-go decisions. The part I remember most wasn't the model — it was a clinical lead changing her recommendation based on what the analysis actually surfaced. Outside of client work I've trained a Transformer from scratch on 200K behavioral sequences, built a LangGraph multi-agent pipeline for automated code review, and deployed a 3-model ICU census forecaster behind a FastAPI service on GCP.
+I build ML systems that ship. Right now I'm an AI Engineering Intern at GrantAide, working on a 3-agent GenAI pipeline. Before that, my production work at Capgemini included a causal inference pipeline that supported roughly $4.2M in pharmaceutical go/no-go decisions. What sticks with me from that project isn't the model. It's a clinical lead who changed her recommendation based on what the analysis actually surfaced. Outside of client work I've trained a Transformer from scratch on 200K behavioral sequences, built a LangGraph multi-agent pipeline for automated code review, and deployed a 3-model ICU census forecaster behind a FastAPI service on GCP.
 
 What I care about usually isn't the model itself. It's what happens after it ships: latency under load, drift, and whether the person on the other end of the dashboard actually trusts the output enough to act on it.
 
@@ -33,6 +33,9 @@ Decision Twin: a retention strategy recommender built on the Gemini API and RAG.
 ---
 
 ## 💼 Professional Experience
+
+**AI Engineering Intern @ GrantAide** *(Current)*
+Working on a 3-agent GenAI pipeline in production. Contributing across agent design, prompt and tool specification, and the evaluation harness used to measure pipeline quality before changes ship.
 
 **Data Scientist @ Capgemini Technology Services** *(July 2022 – August 2024)*
 Production ML on 500K+ patient records for pharma and provider clients. Hospital readmission classifier deployed as a TensorFlow SavedModel on GCP Cloud Run, running at AUC-ROC 0.84, F1 0.63, and 99.8% request success rate. K-Means diagnostic clustering across 2.5 TB of records. SQL ETL pipelines moving 50K+ records daily into the serving layer.
