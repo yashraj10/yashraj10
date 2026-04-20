@@ -4,7 +4,7 @@
 
 ![Profile Views](https://komarev.com/ghpvc/?username=yashraj10&color=blue&style=flat)
 
-I build ML systems that go beyond notebooks — from causal inference pipelines informing multi-million dollar decisions to production Transformer models deployed on the cloud. My work sits at the intersection of **deep learning, agentic AI, and real-world deployment**, with a focus on systems that are defensible end-to-end, not just metric-maximizing.
+I build production ML systems. Recent work includes causal inference pipelines at Capgemini that supported $4.2M in pharma go/no-go decisions, a PyTorch Transformer trained from scratch on 200K behavioral sequences for rage-quit prediction, and a multi-agent LangGraph pipeline for automated code review. Most of what I care about happens after a model ships: latency, drift, and whether anyone actually uses the output.
 
 ---
 
@@ -17,23 +17,23 @@ Built a 3-model ICU census forecasting system (Random Forest + Ridge + Survival 
 Designed a custom PyTorch Transformer encoder (4 layers, 4-head, 128-dim) from scratch on 200K Dota 2 behavioral sequences for rage quit prediction. Achieved AUC-PR 0.269, beating XGBoost/LSTM/LR baselines. Attention weight extraction via forward hooks for interpretability.
 
 **Agentic AI & LLM Pipelines**
-Built a 5-node LangGraph agentic pipeline (AI Repo Co-Pilot) using GPT-4o-mini for automated code review — 33/33 adversarial eval tests passing. Multi-step orchestration with structured output validation and self-healing fallback logic.
+Built a 5-node LangGraph agentic pipeline (AI Repo Co-Pilot) using GPT-4o-mini for automated code review. 33/33 adversarial eval tests passing, with multi-step orchestration, structured output validation, and self-healing fallback logic.
 
 **Causal Inference & Uplift Modeling**
-Designed causal inference pipelines at Capgemini supporting $4.2M pharmaceutical go/no-go decisions — treatment/control cohorts, stratified subgroup analysis, effect sizes with confidence intervals, and SHAP-based interpretability on XGBoost churn models with PSI drift detection.
+Designed causal inference pipelines at Capgemini supporting $4.2M pharmaceutical go/no-go decisions. Work included treatment and control cohorts, stratified subgroup analysis, effect sizes with confidence intervals, and SHAP-based interpretability on XGBoost churn models with PSI drift detection.
 
 **Recommendation Systems & Distributed ML**
 Engineered a Neural Collaborative Filtering system on the MovieLens 32M dataset using PySpark feature engineering, TensorFlow NCF, Apache Airflow orchestration, MLflow experiment tracking, and AWS S3 as a 4-tier data lake. Drift-gated model promotion via PSI monitoring.
 
 **RAG & LLM-Grounded Decision Support**
-Built Decision Twin — a Gemini API + RAG architecture for retention strategy recommendations — comparing grounded (RAG) vs. ungrounded LLM outputs across accuracy, hallucination rate, and business coherence metrics.
+Built Decision Twin, a Gemini API + RAG architecture for retention strategy recommendations. Compares grounded (RAG) vs. ungrounded LLM outputs across accuracy, hallucination rate, and business coherence metrics.
 
 ---
 
 ## 💼 Professional Experience
 
 **Data Scientist @ Capgemini Technology Services** *(July 2022 – August 2024)*
-Built production ML on 500K+ patient records — readmission classifiers, K-Means diagnostic clustering on 2.5 TB, and SQL ETL pipelines processing 50K+ daily records. Deployed TensorFlow SavedModel on GCP Cloud Run; AUC-ROC 0.84, F1 0.63, 99.8% request success rate.
+Built production ML on 500K+ patient records: readmission classifiers, K-Means diagnostic clustering on 2.5 TB, and SQL ETL pipelines processing 50K+ daily records. Deployed TensorFlow SavedModel on GCP Cloud Run with AUC-ROC 0.84, F1 0.63, and 99.8% request success rate.
 
 **Data Science Intern @ Capgemini Technology Services** *(March 2022 – July 2022)*
 Profiled 300K+ patient records and conducted hypothesis testing across 3 clinical units to shape feature selection for production models.
@@ -87,8 +87,6 @@ Profiled 300K+ patient records and conducted hypothesis testing across 3 clinica
 
 ![macOS](https://img.shields.io/badge/MACOS-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![Linux](https://img.shields.io/badge/LINUX-FCC624?style=for-the-badge&logo=linux&logoColor=black)
-
----
 
 ---
 
